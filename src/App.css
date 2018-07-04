@@ -9,9 +9,21 @@ margin:0 auto
 #quote-box{
   transition: 1s;
 }
-#boxy{
-  min-width: 500px
+.center-text{
+  margin-top:65px;
+  box-sizing:border-box;
+}
+.text-quote{
+  font-family: 'Galada', cursive;
 
+}
+#boxy{
+  width: 950px;
+  height: 400px;
+  transition: 1s;
+}
+#author{
+  font-family: 'Nanum Gothic', sans-serif;
 }
 .text-body{
   transition: 1s;
@@ -23,8 +35,7 @@ margin:0 auto
   display: flex;
   align-items: center;
 }
-body{
-  transition: 1s;
+body{auto 0nsition: 1s;
 }
 
 .App-logo {
