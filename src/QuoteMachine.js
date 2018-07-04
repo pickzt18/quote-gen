@@ -30,7 +30,7 @@ class QuoteMachine extends Component {
       this.setState({data}, () => {
         this.setState({quote : data.quote, author : data.author, color: bgColor})
       })
-      document.getElementById("boxy").style.backgroundColor = "rgba(" + this.state.color.r + ", " + this.state.color.g + ", " + this.state.color.b + ", " + this.state.color.a + ")";
+      document.getElementById("boxy").style.backgroundColor = "rgba(" + this.state.color.r + ", " + this.state.color.g + ", " + this.state.color.b + ", " + (1-this.state.color.a) + ")";
       document.body.style.background = "rgba(" + this.state.color.r + ", " + this.state.color.g + ", " + this.state.color.b + ", " + (1-this.state.color.a) + ")";
       console.log(this.state.color.a)
     })
@@ -38,16 +38,20 @@ class QuoteMachine extends Component {
   render() {
     return(
       <div id='quote-box' className='container text-center vertical-center'>
-        <div className='row'>
+        <div className='row align-middle'>
           <div id='boxy' className='col-sm-8 centering rounded-circle'>
-            <h3>Quote Machine</h3>
-            <button id ='new-quote' className='btn btn-outline-dark'onClick={this.handleClick}>
-            Click to get a random Quote!
-            </button>
-            <br />
-            <p id='text' className='text-body'>{this.state.quote}</p>
-            <p id='author' className='text-body'>--{this.state.author}--</p>
-            <a id='tweet-quote' href="twitter.com/intent/tweet"><button className='btn btn-outline-dark btn-sm'>Tweet</button></a>
+            <div className='center-text'>
+              <div className='text-quote'>
+              <h3>Quote Machine</h3>
+              <button id ='new-quote' className='btn btn-outline-dark'onClick={this.handleClick}>
+              Click to get a random Quote!
+              </button>
+              <br />
+              <p id='text' className='text-body'>{this.state.quote}</p>
+              </div>
+              <p id='author' className='text-body'>--{this.state.author}--</p>
+              <a id='tweet-quote' href="twitter.com/intent/tweet"><button className='btn btn-outline-dark btn-sm'>Tweet</button></a>
+              </div>
           </div>
         </div>
       </div>
