@@ -37,7 +37,7 @@ margin:0 auto
   display: flex;
   align-items: center;
 }
-body{auto 0nsition: 1s;
+body{auto transition: 1s;
 }
 
 .App-logo {
